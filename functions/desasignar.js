@@ -1,6 +1,6 @@
 const fs = require('fs');
 const admin = require('firebase-admin');
-const serviceAccount = require('../serviceAccountKey3.json');
+const serviceAccount = require('../ejecutivo-remoto-firebase-adminsdk-bleza-f2f5ea4c78.json');
 
 // admin.initializeApp({
 //     credential: admin.credential.cert(serviceAccount)

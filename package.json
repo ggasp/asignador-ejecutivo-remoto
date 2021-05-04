@@ -9,6 +9,8 @@
   "author": "Jason Dinamarca",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^8.2.1",
+    "firebase-admin": "^9.4.2",
     "yargs": "^16.1.1"
   }
 }

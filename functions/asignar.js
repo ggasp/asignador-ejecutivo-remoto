@@ -1,6 +1,6 @@
 const fs = require('fs');
 const admin = require('firebase-admin');
-const serviceAccount = require('../serviceAccountKey3.json');
+const serviceAccount = require('../ejecutivo-remoto-firebase-adminsdk-bleza-f2f5ea4c78.json');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount)
@@ -39,7 +39,7 @@ let assignExecutives = async(baseId, lastDoc, executives) => {
 
     return new Promise((resolve, reject) => {
 
-        let contacts = db.collection('contacto').where('base_id', '==', baseId).where('ejecutivo_id', '==', '').orderBy('id').startAfter(lastDoc).limit(10000);
+        let contacts = db.collection('contacto').where('base_id', '==', baseId).where('ejecutivo_id', '==', '').where('is_worked','==','false').orderBy('id').startAfter(lastDoc).limit(10000);
 
         if (!contacts)
             reject('Error al consultar la collection contacto');
